@@ -1,0 +1,272 @@
+/*
+   final_project Stylesheet
+
+   Author:    Joe L. Rivas
+   Date:      2024-08-02
+
+   Filename:  styles.css
+
+*/
+
+/* Reset and basic styles */
+body, ul, li, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #333;
+    color: #fff; 
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 960px;
+    min-width: 640px;
+    width: 95%;
+}
+
+/* Header and Navigation */
+header img {
+    display: block;
+    width: 100%;
+}
+
+nav.horizontalNavigation {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav.horizontalNavigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+}
+
+nav.horizontalNavigation ul.show {
+    display: block;
+}
+
+nav.horizontalNavigation a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav.horizontalNavigation a:hover {
+    background-color: #0056b3;
+}
+
+a#navicon {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+a#navicon img {
+    width: 30px;
+    height: auto;
+}
+
+/* Buttons */
+a.button, .button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.4);
+}
+
+a.button:hover, .button:hover {
+    background-color: #0056b3;
+    color: rgb(123, 202, 116);
+    box-shadow: 0 4px 8px rgba(0, 26, 53, 0.4);
+}
+
+/* Content Sections */
+.container {
+    padding: 20px;
+    background-color: #fff; 
+    color: #333; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/*about section*/
+#about {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+#about h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgb(123, 202, 116);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+#about p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+#about ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+#about ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(123, 202, 116)
+    padding: 10px;
+    border: 1px solid #fff;
+    transition: background 0.3s, transform 0.3s;
+}
+#about ul li:hover {
+    background-color: #0056b3;
+    color: rgb(123, 202, 116);
+    box-shadow: 0 4px 8px rgba(0, 26, 53, 0.4);
+    transform: scale(1.015);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: linear-gradient(90deg, #007BFF, #0056b3); 
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+footer a {
+    color: limegreen;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: blue;
+}
+
+/* Media Queries */
+@media (min-width: 641px) {
+    nav.horizontalNavigation ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: static;
+        background-color: transparent;
+    }
+
+    a#navicon {
+        display: none;
+    }
+
+    nav.horizontalNavigation a {
+        text-align: left;
+    }
+}
+
+@media (max-width: 640px) {
+    nav.horizontalNavigation ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav.horizontalNavigation ul.show {
+        display: block;
+    }
+
+    a#navicon {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+    }
+
+    a#navicon img {
+        width: 30px;
+        height: auto;
+    }
+}
+
+/* Additional CSS for screens less than 430px */
+@media (max-width: 430px) {
+    body {
+        font-size: 14px; 
+    }  
+
+    nav.horizontalNavigation a {
+        font-size: 0.9em; 
+        padding: 8px; 
+    }
+
+    a#navicon img {
+        width: 25px; 
+    }
+
+    .container {
+        padding: 10px; 
+    }
+
+    table th, table td {
+        padding: 8px; 
+        font-size: 0.9em; 
+    }
+
+    h2 {
+        font-size: 1.5em; 
+    }
+
+    p, li {
+        font-size: 0.9em;
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 8px; 
+    }
+}

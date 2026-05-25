@@ -1,0 +1,20 @@
+/*cp_animate.css*/
+
+/* Transition Styles for Navigation Links */
+nav.horizontalNavigation a {
+    color: rgb(255, 255, 255); /* White text color */
+    font-size: 1em; /* Normal font size */
+    letter-spacing: 0em; /* Normal letter spacing */
+    text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px; /* Subtle text shadow */
+    transition: color 1.5s ease-in 0.5s,
+                font-size 2s ease,
+                letter-spacing 2s ease-out,
+                text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+}
+
+nav.horizontalNavigation a:hover {
+    color: rgb(123, 202, 116); /* Orange text color on hover */
+    font-size: 1.2em; /* Slightly larger font size on hover */
+    letter-spacing: 0.1em; /* Increased letter spacing on hover */
+    text-shadow: rgba(0, 0, 0, 0.5) 5px -1px 5px; /* More pronounced text shadow on hover */
+}

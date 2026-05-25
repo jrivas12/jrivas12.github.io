@@ -1,0 +1,64 @@
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+    section#main {
+       width: 100%;
+    }
+    
+    section#right {
+       width: 100%;
+    }
+    
+    a#navicon {
+       display: block;
+    }
+    
+    header nav ul {
+       display: none;
+    }
+    
+    header nav ul li {
+       font-size: 1em;
+       line-height: 1.3em;
+       height: 1.3em;
+    }
+    
+    a#navicon:hover+ul, header nav ul:hover {
+       display: block;
+    }
+ }
+ 
+ /* =============================================
+    Tablet and Desktop Styles: greater than 640px
+    =============================================
+ */
+ @media only screen and (min-width: 641px) {
+ 
+    section#main {
+       float: left;
+       width: 70%;
+    }
+    
+    section#right {
+       float: left;
+       width: 30%;
+    }
+    
+    header nav ul {
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow: row nowrap;
+       flex-flow: row nowrap;
+       -webkit-justify-content: center;
+       justify-content: center;
+    }
+    
+    header nav ul li {
+       -webkit-flex: 0 1 auto;
+       flex: 0 1 auto;
+    }
+ }

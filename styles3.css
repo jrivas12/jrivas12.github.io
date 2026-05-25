@@ -1,0 +1,134 @@
+/* Basic Reset */
+body, ul, li, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 960px;
+    min-width: 640px;
+    width: 95%;
+}
+
+header img {
+    display: block;
+    width: 100%;
+}
+
+nav.horizontalNavigation {
+    background-color: #333;
+    position: relative;
+}
+
+nav.horizontalNavigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+}
+
+nav.horizontalNavigation ul.show {
+    display: block; /* Show menu when 'show' class is added */
+}
+
+nav.horizontalNavigation a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+a#navicon {
+    display: block; /* Show navicon by default */
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+a#navicon img {
+    width: 30px;
+    height: auto;
+}
+
+/* Media Queries */
+
+/* Tablet and Desktop Styles: 641px and above */
+@media (min-width: 641px) {
+    nav.horizontalNavigation ul {
+        display: flex; /* Flex for horizontal layout */
+        flex-direction: row;
+        justify-content: center;
+        position: static;
+        background-color: transparent;
+    }
+
+    nav.horizontalNavigation ul.show {
+        display: flex; /* Ensure menu remains visible */
+    }
+
+    a#navicon {
+        display: none; /* Hide navicon */
+    }
+
+    nav.horizontalNavigation a {
+        text-align: left; /* Align text */
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    section#main {
+       width: 100%;
+    }
+    
+    section#right {
+       width: 100%;
+    }
+    
+    a#navicon {
+       display: block;
+    }
+    
+    header nav ul {
+       display: none;
+    }
+    
+    header nav ul li {
+       font-size: 1em;
+       line-height: 1.3em;
+       height: 1.3em;
+    }
+    
+/* Mobile Styles: 640px and below */
+@media (max-width: 640px) {
+    nav.horizontalNavigation ul {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+    }
+
+    nav.horizontalNavigation ul.show {
+        display: block; /* Show menu when 'show' class is added */
+    }
+
+    a#navicon {
+        display: block; /* Show navicon */
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+    }
+
+    a#navicon img {
+        width: 30px;
+        height: auto;
+    }
+}
